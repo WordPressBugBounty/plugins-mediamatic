@@ -1,0 +1,269 @@
+# Copyright (C) 2026 Eric Nelson
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Folderify 1.1.0\n"
+"Report-Msgid-Bugs-To: https://mo.oppoyo.com\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-13T17:06:45+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Antigravity\n"
+"X-Domain: folderify\n"
+
+#: folderify.php:6
+msgid "Folderify - Media Library Organizer"
+msgstr ""
+
+#: folderify.php:8
+msgid "Organize your WordPress media library with unlimited folders."
+msgstr ""
+
+#: includes/class-settings.php:56
+#: includes/class-settings.php:57
+#: includes/class-settings.php:148
+msgid "Folderify"
+msgstr ""
+
+#: src/components/SystemFolders.js:91
+msgid "All Files"
+msgstr ""
+
+#: src/components/SystemFolders.js:100
+msgid "Uncategorized"
+msgstr ""
+
+#: src/components/Sidebar.js:75
+#: src/components/Sidebar.js:89
+msgid "Sort Folders"
+msgstr ""
+
+#: src/components/Sidebar.js:96
+#: src/components/Sidebar.js:132
+msgid "Ascending"
+msgstr ""
+
+#: src/components/Sidebar.js:102
+#: src/components/Sidebar.js:138
+msgid "Descending"
+msgstr ""
+
+#: src/components/Sidebar.js:108
+#: src/components/Sidebar.js:150
+msgid "Default"
+msgstr ""
+
+#: src/components/Sidebar.js:115
+msgid "Sort Files"
+msgstr ""
+
+#: src/components/Sidebar.js:161
+msgid "Close"
+msgstr ""
+
+#: src/components/Sidebar.js:173
+msgid "Search folders"
+msgstr ""
+
+#: src/components/Sidebar.js:219
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: src/components/Sidebar.js:223
+msgid "Add Folder"
+msgstr ""
+
+#: includes/class-settings.php:158
+msgid "Settings saved successfully."
+msgstr ""
+
+
+#: includes/class-settings.php:185
+msgid "General"
+msgstr ""
+
+#: includes/class-settings.php:194
+msgid "Import / Export"
+msgstr ""
+
+#: includes/class-settings.php:206
+msgid "Folder Access Mode"
+msgstr ""
+
+#: includes/class-settings.php:209
+msgid "Choose how folders are shared and managed across your site."
+msgstr ""
+
+#: includes/class-settings.php:218
+msgid "Global Shared Folders (Folders are visible to all users)"
+msgstr ""
+
+#: includes/class-settings.php:231
+msgid "Which post types to use with Folderify"
+msgstr ""
+
+#: includes/class-settings.php:234
+msgid "Enable the folder sidebar for these post type editors."
+msgstr ""
+
+#: includes/class-settings.php:253
+msgid "No public post types found."
+msgstr ""
+
+#: includes/class-settings.php:262
+msgid "Folder counter"
+msgstr ""
+
+#: includes/class-settings.php:264
+msgid "Choose how the file count badge on each folder is calculated."
+msgstr ""
+
+#: includes/class-settings.php:271
+msgid "Count files in each folder"
+msgstr ""
+
+#: includes/class-settings.php:275
+msgid "Count files in both parent folder and subfolders"
+msgstr ""
+
+#: includes/class-settings.php:282
+msgid "Data & Privacy"
+msgstr ""
+
+#: includes/class-settings.php:286
+msgid "Delete data on uninstall"
+msgstr ""
+
+#: includes/class-settings.php:287
+msgid "Remove all folders and plugin settings when the plugin is deleted."
+msgstr ""
+
+#: includes/class-settings.php:297
+msgid "Save Changes"
+msgstr ""
+
+#: includes/class-settings.php:299
+msgid "Folderify — Media Library Folders"
+msgstr ""
+
+#: includes/class-settings.php:308
+msgid "Export"
+msgstr ""
+
+#: includes/class-settings.php:310
+msgid "Download your current folder structure as a CSV file for backup or migration."
+msgstr ""
+
+#: includes/class-settings.php:314
+msgid "Export folders (CSV)"
+msgstr ""
+
+#: includes/class-settings.php:316
+msgid "Exports your visible folders. The CSV can be re-imported here or into another site."
+msgstr ""
+
+#: includes/class-settings.php:322
+msgid "Download CSV"
+msgstr ""
+
+
+
+#: includes/class-rest.php:185
+msgid "No attachments provided."
+msgstr ""
+
+#: includes/class-rest.php:190
+msgid "You cannot edit this media."
+msgstr ""
+
+#: includes/class-rest.php:196
+msgid "You cannot assign to this folder."
+msgstr ""
+
+#: includes/class-rest.php:219
+msgid "No file uploaded."
+msgstr ""
+
+#: includes/class-permissions.php:166
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: includes/class-media-replacer.php:32
+#: includes/class-media-replace-page.php:70
+msgid "Invalid attachment ID."
+msgstr ""
+
+#: includes/class-media-replacer.php:36
+#: includes/class-media-replace-page.php:74
+#: includes/class-media-replace-page.php:260
+msgid "You do not have permission to edit this attachment."
+msgstr ""
+
+#: includes/class-media-replace-page.php:52
+#: includes/class-media-replace-page.php:53
+#: includes/class-media-hooks.php:50
+#: includes/class-media-hooks.php:84
+#: includes/class-media-hooks.php:85
+msgid "Replace Media"
+msgstr ""
+
+#: includes/class-media-replace-page.php:132
+msgid "Supports: %s"
+msgstr ""
+
+#: includes/class-media-replace-page.php:254
+msgid "Security check failed."
+msgstr ""
+
+#: includes/class-media-hooks.php:56
+msgid "Upload a new file"
+msgstr ""
+
+#: includes/class-media-hooks.php:57
+msgid "To replace the current file, click the button and upload a replacement file."
+msgstr ""
+
+#: includes/class-folder-manager.php:109
+msgid "Sorry, you are not allowed to create folders."
+msgstr ""
+
+#: includes/class-folder-manager.php:115
+msgid "New Folder"
+msgstr ""
+
+#: includes/class-folder-manager.php:125
+#: includes/class-folder-manager.php:178
+msgid "Folder name cannot be empty."
+msgstr ""
+
+#: includes/class-folder-manager.php:152
+msgid "Could not insert folder."
+msgstr ""
+
+#: includes/class-folder-manager.php:165
+msgid "Sorry, you are not allowed to edit this folder."
+msgstr ""
+
+#: includes/class-folder-manager.php:192
+#: includes/class-folder-manager.php:254
+msgid "Folder cannot be its own parent."
+msgstr ""
+
+#: includes/class-folder-manager.php:226
+msgid "Could not update folder."
+msgstr ""
+
+#: includes/class-folder-manager.php:240
+msgid "Sorry, you are not allowed to move this folder."
+msgstr ""
+
+#: includes/class-folder-manager.php:261
+msgid "Cannot move a folder into its own subfolder."
+msgstr ""
+
+#: includes/class-folder-manager.php:274
+msgid "Folder not found."
+msgstr ""
