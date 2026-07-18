@@ -214,12 +214,59 @@ const Sidebar = () => {
                 {/* Bottom Bar */}
                 {folders && folders.length > 0 && (
                     <div className="mediamatic-bottom-bar" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                        <div style={{ display: 'none', flexDirection: 'column', gap: '4px' }}>
-                            {/* 
+                        <div className="mediamatic-pro-tooltip-wrapper" style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                            <style>{`
+                                .mediamatic-pro-tooltip-wrapper:hover .mediamatic-pro-tooltip {
+                                    opacity: 1 !important;
+                                    visibility: visible !important;
+                                }
+                                .mediamatic-pro-tooltip::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    border-width: 6px;
+                                    border-style: solid;
+                                    border-color: #1d2327 transparent transparent transparent;
+                                }
+                            `}</style>
                             <a href="https://mediamatic.oppoyo.com/" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', fontSize: '13px', color: '#2271b1', textDecoration: 'none', fontWeight: '500' }}>
                                 {__('Upgrade to Pro', 'mediamatic')}
                             </a>
-                            */}
+                            <div className="mediamatic-pro-tooltip" style={{
+                                position: 'absolute',
+                                bottom: '100%',
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                marginBottom: '10px',
+                                background: '#1d2327',
+                                color: '#c3c4c7',
+                                padding: '12px 16px',
+                                borderRadius: '6px',
+                                width: '260px',
+                                fontSize: '12px',
+                                lineHeight: '1.5',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                                pointerEvents: 'none',
+                                opacity: 0,
+                                visibility: 'hidden',
+                                transition: 'opacity 0.2s, visibility 0.2s',
+                                zIndex: 100000
+                            }}>
+                                <div style={{ fontWeight: '600', color: '#fff', marginBottom: '8px', fontSize: '13px' }}>Pro Features:</div>
+                                <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Nested Subfolders</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Folder Colors</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Private Per-User Folders</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Role-Based Permissions</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Download Folder as ZIP</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Duplicate Folders</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Breadcrumb Navigation</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Smart Imports</li>
+                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}><span style={{ color: '#00a32a' }}>✓</span> Automatic Backups</li>
+                                </ul>
+                            </div>
                         </div>
                         <button className="button button-primary mediamatic-add-folder-btn" onClick={handleCreate}>
                             + {__('Add Folder', 'mediamatic')}

@@ -1,23 +1,23 @@
 /* Base styling for our React app */
 
 :root {
-    --folderify-sidebar-width: 300px;
+    --mediamatic-sidebar-width: 300px;
 }
 
-@keyframes folderify_spin {
+@keyframes mediamatic_spin {
     100% {
         transform: rotate(360deg);
     }
 }
 
 /* WP Media Frame overrides when plugin is active */
-body.folderify-active #wpbody {
+body.mediamatic-active #wpbody {
     display: flex !important;
     min-height: calc(100vh - 32px);
     /* Account for WP admin bar */
 }
 
-body.folderify-active #wpbody-content {
+body.mediamatic-active #wpbody-content {
     flex: 1;
     min-width: 0;
     padding-bottom: 0;
@@ -26,8 +26,8 @@ body.folderify-active #wpbody-content {
     padding-left: 20px !important;
 }
 
-#folderify-root {
-    width: var(--folderify-sidebar-width);
+#mediamatic-root {
+    width: var(--mediamatic-sidebar-width);
     flex-shrink: 0;
     align-self: flex-start;
     /* Crucial for sticky positioning in flex container */
@@ -43,7 +43,7 @@ body.folderify-active #wpbody-content {
 }
 
 /* PRO Badge styling for context menu and other small UI elements */
-.folderify-pro-badge-mini {
+.mediamatic-pro-badge-mini {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -63,20 +63,20 @@ body.folderify-active #wpbody-content {
 }
 
 /* Media Modal Integration */
-.attachments-browser.folderify-active {
+.attachments-browser.mediamatic-active {
     display: flex;
     flex-direction: column;
 }
 
-.folderify-flex-container {
+.mediamatic-flex-container {
     display: flex;
     flex: 1;
     overflow: hidden;
     height: 100%;
 }
 
-#folderify-modal-root {
-    width: var(--folderify-sidebar-width);
+#mediamatic-modal-root {
+    width: var(--mediamatic-sidebar-width);
     flex-shrink: 0;
     border-right: 1px solid #ccd0d4;
     background: #fff;
@@ -85,22 +85,22 @@ body.folderify-active #wpbody-content {
     flex-direction: column;
 }
 
-.folderify-modal-content {
+.mediamatic-modal-content {
     flex: 1;
     position: relative;
     min-width: 0;
 }
 
 /* Reset any left properties on standard WP elements that may be defined in WP core */
-.attachments-browser.folderify-active .media-toolbar,
-.attachments-browser.folderify-active .attachments,
-.attachments-browser.folderify-active .uploader-inline,
-.attachments-browser.folderify-active .attachments-wrapper {
+.attachments-browser.mediamatic-active .media-toolbar,
+.attachments-browser.mediamatic-active .attachments,
+.attachments-browser.mediamatic-active .uploader-inline,
+.attachments-browser.mediamatic-active .attachments-wrapper {
     left: 0 !important;
 }
 
 /* Drag and Drop Helper — matches sidebar style */
-.folderify-drag-helper {
+.mediamatic-drag-helper {
     z-index: 999999;
     background: #1e293b;
     border: none;
@@ -124,7 +124,7 @@ body.folderify-active #wpbody-content {
         color: #94a3b8;
     }
 
-    .folderify-drag-count {
+    .mediamatic-drag-count {
         background: #0ea5e9;
         color: #fff;
         border-radius: 10px;
@@ -139,12 +139,12 @@ body.folderify-active #wpbody-content {
 }
 
 /* Ensure the WP list table doesn't overflow the flex container */
-body.folderify-active .wp-list-table {
+body.mediamatic-active .wp-list-table {
     table-layout: fixed;
 }
 
 /* Sidebar Wrapper */
-.folderify-sidebar-wrapper {
+.mediamatic-sidebar-wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -153,22 +153,22 @@ body.folderify-active .wp-list-table {
     /* Premium white */
 }
 
-.folderify-sidebar-inner {
+.mediamatic-sidebar-inner {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 /* Top Bar (Search & Hamburger) / Toolbar Overlay */
-.folderify-top-bar {
+.mediamatic-top-bar {
     display: flex;
     align-items: stretch;
     height: 54px;
     border-bottom: 1px solid #dcdcde;
     background: #fbfbfc;
 
-    &.folderify-toolbar-overlay {
-        .folderify-toolbar-btn {
+    &.mediamatic-toolbar-overlay {
+        .mediamatic-toolbar-btn {
             background: transparent;
             border: none;
             cursor: pointer;
@@ -204,21 +204,21 @@ body.folderify-active .wp-list-table {
             }
         }
 
-        .folderify-sort-wrapper,
-        .folderify-toolbar-dropdown-wrapper {
+        .mediamatic-sort-wrapper,
+        .mediamatic-toolbar-dropdown-wrapper {
             position: relative;
 
-            .folderify-options-dropdown-container {
+            .mediamatic-options-dropdown-container {
                 left: 0 !important;
                 right: auto;
                 min-width: 100%;
 
-                .folderify-item-content {
+                .mediamatic-item-content {
                     justify-content: flex-start !important;
                 }
             }
 
-            .folderify-sort-dropdown-container {
+            .mediamatic-sort-dropdown-container {
                 position: absolute;
                 top: calc(100% + 5px);
                 left: 0;
@@ -236,10 +236,10 @@ body.folderify-active .wp-list-table {
                     padding: 0;
                 }
 
-                .folderify-dropdown-item {
+                .mediamatic-dropdown-item {
                     position: relative;
 
-                    .folderify-item-content {
+                    .mediamatic-item-content {
                         padding: 8px 12px;
                         display: flex;
                         align-items: center;
@@ -260,7 +260,7 @@ body.folderify-active .wp-list-table {
                             color: #2271b1;
                         }
 
-                        .folderify-chevron {
+                        .mediamatic-chevron {
                             opacity: 0.5;
                             width: 14px;
                             height: 14px;
@@ -268,7 +268,7 @@ body.folderify-active .wp-list-table {
                         }
                     }
 
-                    &.folderify-divider {
+                    &.mediamatic-divider {
                         height: 1px;
                         background: #dcdcde;
                         margin: 5px 0;
@@ -276,11 +276,11 @@ body.folderify-active .wp-list-table {
                     }
 
                     /* Show submenu on hover */
-                    &:hover>.folderify-submenu {
+                    &:hover>.mediamatic-submenu {
                         display: block;
                     }
 
-                    .folderify-submenu {
+                    .mediamatic-submenu {
                         display: none;
                         position: absolute;
                         top: -5px;
@@ -297,10 +297,10 @@ body.folderify-active .wp-list-table {
                 }
 
                 /* Styles for checkmarks */
-                .folderify-check-item {
+                .mediamatic-check-item {
                     justify-content: flex-start !important;
 
-                    .folderify-check-icon {
+                    .mediamatic-check-icon {
                         margin-right: 8px;
                         color: #2271b1;
                         width: 16px;
@@ -308,7 +308,7 @@ body.folderify-active .wp-list-table {
                         flex-shrink: 0;
                     }
 
-                    .folderify-no-icon {
+                    .mediamatic-no-icon {
                         width: 16px;
                         margin-right: 8px;
                         display: inline-block;
@@ -328,14 +328,14 @@ body.folderify-active .wp-list-table {
         }
     }
 
-    .folderify-search {
+    .mediamatic-search {
         flex: 1;
         border-right: 1px solid #dcdcde;
         display: flex;
         align-items: center;
         padding: 0 15px;
 
-        .folderify-search-input-wrapper {
+        .mediamatic-search-input-wrapper {
             position: relative;
             width: 100%;
             display: flex;
@@ -374,7 +374,7 @@ body.folderify-active .wp-list-table {
         }
     }
 
-    .folderify-hamburger-btn {
+    .mediamatic-hamburger-btn {
         width: 54px;
         background: transparent;
         border: none;
@@ -399,12 +399,12 @@ body.folderify-active .wp-list-table {
 }
 
 /* System Folders */
-.folderify-system-folders-wrapper {
+.mediamatic-system-folders-wrapper {
     /* No padding, flush to edges */
     border-bottom: 1px solid #dcdcde;
 }
 
-.folderify-system-folders-grid {
+.mediamatic-system-folders-grid {
     display: flex;
     background: #fff;
 
@@ -446,7 +446,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Input Buttons Hover */
-.folderify-input-btn {
+.mediamatic-input-btn {
     transition: all 0.2s ease;
 
     svg {
@@ -467,7 +467,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Tree */
-.folderify-tree {
+.mediamatic-tree {
     flex: 1;
     overflow-y: auto;
     padding: 15px 10px;
@@ -479,11 +479,11 @@ body.folderify-active .wp-list-table {
     }
 
     /* Nested ULs (Subfolders) */
-    ul.folderify-subfolders {
+    ul.mediamatic-subfolders {
         margin-left: 20px;
         position: relative;
 
-        &>.folderify-folder-item {
+        &>.mediamatic-folder-item {
             position: relative;
 
             /* Horizontal branch connecting to this item */
@@ -536,12 +536,12 @@ body.folderify-active .wp-list-table {
         }
     }
 
-    .folderify-folder-item {
+    .mediamatic-folder-item {
         position: relative;
         margin-bottom: 2px;
         /* Increased for airy feel */
 
-        &>.folderify-folder-header {
+        &>.mediamatic-folder-header {
             border-radius: 4px;
             padding: 6px 10px;
             /* Slimmer header padding */
@@ -567,7 +567,7 @@ body.folderify-active .wp-list-table {
             }
         }
 
-        &.active>.folderify-folder-header {
+        &.active>.mediamatic-folder-header {
             background: #f2f4f6;
 
             /* Text handles its own color via JS now, but enforcing count color */
@@ -577,7 +577,7 @@ body.folderify-active .wp-list-table {
             }
         }
 
-        &.context-menu-active>.folderify-folder-header {
+        &.context-menu-active>.mediamatic-folder-header {
             background: #2271b1 !important;
 
             .folder-name,
@@ -594,7 +594,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Resizer Handle */
-.folderify-resizer {
+.mediamatic-resizer {
     position: absolute;
     top: 0;
     right: -3px;
@@ -609,7 +609,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Toggle */
-.folderify-toggle {
+.mediamatic-toggle {
     position: absolute;
     top: 50%;
     right: -14px;
@@ -639,13 +639,13 @@ body.folderify-active .wp-list-table {
 }
 
 /* Bottom Bar */
-.folderify-bottom-bar {
+.mediamatic-bottom-bar {
     padding: 15px;
     background: #fff;
     margin-top: auto;
     /* push to bottom in flex column */
 
-    .folderify-add-folder-btn {
+    .mediamatic-add-folder-btn {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -668,7 +668,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Sidebar Wrapper */
-.folderify-sidebar-wrapper {
+.mediamatic-sidebar-wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -679,7 +679,7 @@ body.folderify-active .wp-list-table {
         border-right: none;
         background: transparent;
 
-        .folderify-toggle {
+        .mediamatic-toggle {
             right: -14px;
             /* Fixed protruding right */
             border-left: 1px solid #ccd0d4;
@@ -694,7 +694,7 @@ body.folderify-active .wp-list-table {
 }
 
 /* Suppress native WP drag-and-drop overlay when reordering folders */
-body.folderify-folder-dragging .uploader-window {
+body.mediamatic-folder-dragging .uploader-window {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
@@ -703,7 +703,7 @@ body.folderify-folder-dragging .uploader-window {
 
 /* ─── Media Area Header (Breadcrumb + Subfolder Cards) ─── */
 
-.folderify-media-header {
+.mediamatic-media-header {
     padding: 8px 0 0;
     display: flex;
     flex-direction: column;
@@ -711,7 +711,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Breadcrumb — flat, no background */
-.folderify-breadcrumb {
+.mediamatic-breadcrumb {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -721,7 +721,7 @@ body.folderify-folder-dragging .uploader-window {
     flex-wrap: wrap;
 }
 
-.folderify-breadcrumb-home {
+.mediamatic-breadcrumb-home {
     display: inline-flex;
     align-items: center;
     border: none;
@@ -735,19 +735,19 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-breadcrumb-segment {
+.mediamatic-breadcrumb-segment {
     display: inline-flex;
     align-items: center;
     gap: 4px;
 }
 
-.folderify-breadcrumb-sep {
+.mediamatic-breadcrumb-sep {
     color: #c3c4c7;
     display: inline-flex;
     align-items: center;
 }
 
-.folderify-breadcrumb-link {
+.mediamatic-breadcrumb-link {
     background: none;
     border: none;
     color: #2271b1;
@@ -762,7 +762,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-breadcrumb-current {
+.mediamatic-breadcrumb-current {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -770,7 +770,7 @@ body.folderify-folder-dragging .uploader-window {
     color: #1d2327;
 }
 
-.folderify-breadcrumb-dot {
+.mediamatic-breadcrumb-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -778,14 +778,14 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Subfolder chips — compact, WP style */
-.folderify-subfolders-grid {
+.mediamatic-subfolders-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     padding-bottom: 2px;
 }
 
-.folderify-subfolder-card {
+.mediamatic-subfolder-card {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -805,13 +805,13 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-subfolder-icon {
+.mediamatic-subfolder-icon {
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
 
-.folderify-subfolder-name {
+.mediamatic-subfolder-name {
     font-weight: 400;
     white-space: nowrap;
     overflow: hidden;
@@ -819,7 +819,7 @@ body.folderify-folder-dragging .uploader-window {
     max-width: 140px;
 }
 
-.folderify-subfolder-count {
+.mediamatic-subfolder-count {
     font-size: 11px;
     color: #8c8f94;
     background: #e5e5e5;
@@ -829,7 +829,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* ─── Empty State ─── */
-.folderify-empty-state {
+.mediamatic-empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -838,28 +838,28 @@ body.folderify-folder-dragging .uploader-window {
     gap: 6px;
 }
 
-.folderify-empty-title {
+.mediamatic-empty-title {
     font-size: 13px;
     font-weight: 600;
     color: #1d2327;
     margin: 8px 0 0;
 }
 
-.folderify-empty-desc {
+.mediamatic-empty-desc {
     font-size: 12px;
     color: #8c8f94;
     margin: 0 0 10px;
     line-height: 1.5;
 }
 
-.folderify-empty-actions {
+.mediamatic-empty-actions {
     display: flex;
     flex-direction: column;
     gap: 6px;
     width: 100%;
 }
 
-.folderify-empty-btn-primary {
+.mediamatic-empty-btn-primary {
     background: #2271b1;
     color: #fff;
     border: none;
@@ -876,7 +876,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-empty-btn-secondary {
+.mediamatic-empty-btn-secondary {
     display: block;
     background: none;
     color: #2271b1;
@@ -896,19 +896,19 @@ body.folderify-folder-dragging .uploader-window {
 
 /* ─── Upload Folder Picker ─── */
 
-#folderify-upload-folder-picker {
+#mediamatic-upload-folder-picker {
     display: flex;
     justify-content: center;
     padding: 4px 0 12px;
 }
 
-.folderify-upload-picker {
+.mediamatic-upload-picker {
     width: 100%;
     max-width: 380px;
     font-family: inherit;
 }
 
-.folderify-upload-picker-inner {
+.mediamatic-upload-picker-inner {
     position: relative;
     display: flex;
     align-items: center;
@@ -917,7 +917,7 @@ body.folderify-folder-dragging .uploader-window {
     justify-content: center;
 }
 
-.folderify-upload-picker-label {
+.mediamatic-upload-picker-label {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -933,7 +933,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Trigger button */
-.folderify-folder-select-btn {
+.mediamatic-folder-select-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -958,14 +958,14 @@ body.folderify-folder-dragging .uploader-window {
         box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.15);
     }
 
-    .folderify-folder-dot {
+    .mediamatic-folder-dot {
         width: 9px;
         height: 9px;
         border-radius: 50%;
         flex-shrink: 0;
     }
 
-    .folderify-folder-select-name {
+    .mediamatic-folder-select-name {
         flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -974,13 +974,13 @@ body.folderify-folder-dragging .uploader-window {
         text-align: left;
     }
 
-    .folderify-pt-check {
+    .mediamatic-pt-check {
         flex-shrink: 0;
         margin-left: auto;
     }
 }
 
-.folderify-folder-option-empty {
+.mediamatic-folder-option-empty {
     padding: 10px 14px;
     font-size: 12.5px;
     color: #a0aab2;
@@ -989,7 +989,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Dropdown panel */
-.folderify-folder-dropdown {
+.mediamatic-folder-dropdown {
     position: absolute;
     top: calc(100% + 6px);
     left: 50%;
@@ -1017,7 +1017,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Search input */
-.folderify-folder-search-wrap {
+.mediamatic-folder-search-wrap {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1031,7 +1031,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-folder-search-input {
+.mediamatic-folder-search-input {
     flex: 1;
     border: none !important;
     background: transparent !important;
@@ -1053,7 +1053,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Options list */
-.folderify-folder-list {
+.mediamatic-folder-list {
     max-height: 220px;
     overflow-y: auto;
     padding: 4px 0;
@@ -1073,14 +1073,14 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* ── Tree picker nodes ── */
-.folderify-pt-root,
-.folderify-pt-children {
+.mediamatic-pt-root,
+.mediamatic-pt-children {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.folderify-pt-children {
+.mediamatic-pt-children {
     position: relative;
     margin-left: 16px;
 
@@ -1097,7 +1097,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 
     // Horizontal branch per child
-    >.folderify-pt-item::before {
+    >.mediamatic-pt-item::before {
         content: '';
         position: absolute;
         top: 13px;
@@ -1109,12 +1109,12 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-pt-item {
+.mediamatic-pt-item {
     position: relative;
     margin: 0;
 }
 
-.folderify-pt-row {
+.mediamatic-pt-row {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1139,11 +1139,11 @@ body.folderify-folder-dragging .uploader-window {
         color: #2271b1;
     }
 
-    .folderify-pt-icon {
+    .mediamatic-pt-icon {
         flex-shrink: 0;
     }
 
-    .folderify-pt-name {
+    .mediamatic-pt-name {
         flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1151,7 +1151,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-folder-clear {
+.mediamatic-folder-clear {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1172,7 +1172,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-chevron {
+.mediamatic-chevron {
     color: #8c8f94;
     flex-shrink: 0;
     transition: transform 0.18s ease;
@@ -1183,7 +1183,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Dropdown panel */
-.folderify-folder-dropdown {
+.mediamatic-folder-dropdown {
     position: absolute;
     top: calc(100% + 6px);
     left: 50%;
@@ -1211,7 +1211,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Search input */
-.folderify-folder-search-wrap {
+.mediamatic-folder-search-wrap {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1225,7 +1225,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-folder-search-input {
+.mediamatic-folder-search-input {
     flex: 1;
     border: none !important;
     background: transparent !important;
@@ -1247,7 +1247,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Options list */
-.folderify-folder-list {
+.mediamatic-folder-list {
     max-height: 220px;
     overflow-y: auto;
     padding: 4px 0;
@@ -1267,14 +1267,14 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* ── Tree picker nodes ── */
-.folderify-pt-root,
-.folderify-pt-children {
+.mediamatic-pt-root,
+.mediamatic-pt-children {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.folderify-pt-children {
+.mediamatic-pt-children {
     position: relative;
     margin-left: 16px;
 
@@ -1291,7 +1291,7 @@ body.folderify-folder-dragging .uploader-window {
     }
 
     // Horizontal branch per child
-    >.folderify-pt-item::before {
+    >.mediamatic-pt-item::before {
         content: '';
         position: absolute;
         top: 13px;
@@ -1303,12 +1303,12 @@ body.folderify-folder-dragging .uploader-window {
     }
 }
 
-.folderify-pt-item {
+.mediamatic-pt-item {
     position: relative;
     margin: 0;
 }
 
-.folderify-pt-row {
+.mediamatic-pt-row {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1333,24 +1333,24 @@ body.folderify-folder-dragging .uploader-window {
         color: #2271b1;
     }
 
-    .folderify-pt-icon {
+    .mediamatic-pt-icon {
         flex-shrink: 0;
     }
 
-    .folderify-pt-name {
+    .mediamatic-pt-name {
         flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    .folderify-pt-check {
+    .mediamatic-pt-check {
         flex-shrink: 0;
         margin-left: auto;
     }
 }
 
-.folderify-folder-option-empty {
+.mediamatic-folder-option-empty {
     padding: 10px 14px;
     font-size: 12.5px;
     color: #a0aab2;
@@ -1358,7 +1358,7 @@ body.folderify-folder-dragging .uploader-window {
     list-style: none;
 }
 
-@keyframes folderify_fade_in_up {
+@keyframes mediamatic_fade_in_up {
     from {
         opacity: 0;
         transform: translate(-50%, 10px);
@@ -1371,7 +1371,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* --- Import Prompt Modal --- */
-.folderify-import-modal-overlay {
+.mediamatic-import-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -1384,7 +1384,7 @@ body.folderify-folder-dragging .uploader-window {
     z-index: 100000;
 }
 
-.folderify-import-modal {
+.mediamatic-import-modal {
     background: #fff;
     width: 460px;
     max-width: 92vw;
@@ -1395,12 +1395,12 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Header */
-.folderify-import-modal-header {
+.mediamatic-import-modal-header {
     padding: 32px 32px 20px;
     text-align: center;
     border-bottom: 1px solid #f0f0f1;
 
-    .folderify-import-modal-icon {
+    .mediamatic-import-modal-icon {
         width: 52px;
         height: 52px;
         border-radius: 50%;
@@ -1429,14 +1429,14 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Plugin list */
-.folderify-import-modal-body {
+.mediamatic-import-modal-body {
     padding: 16px 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.folderify-import-plugin-card {
+.mediamatic-import-plugin-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1451,12 +1451,12 @@ body.folderify-folder-dragging .uploader-window {
         background: #f0fdf4;
     }
 
-    .folderify-import-plugin-card-left {
+    .mediamatic-import-plugin-card-left {
         display: flex;
         align-items: center;
         gap: 12px;
 
-        .folderify-import-plugin-icon {
+        .mediamatic-import-plugin-icon {
             width: 36px;
             height: 36px;
             border-radius: 6px;
@@ -1469,14 +1469,14 @@ body.folderify-folder-dragging .uploader-window {
             flex-shrink: 0;
         }
 
-        .folderify-import-plugin-name {
+        .mediamatic-import-plugin-name {
             display: block;
             font-size: 13px;
             font-weight: 600;
             color: #1d2327;
         }
 
-        .folderify-import-plugin-meta {
+        .mediamatic-import-plugin-meta {
             display: block;
             font-size: 12px;
             color: #8c8f94;
@@ -1484,13 +1484,13 @@ body.folderify-folder-dragging .uploader-window {
         }
     }
 
-    .folderify-import-plugin-card-right {
+    .mediamatic-import-plugin-card-right {
         flex-shrink: 0;
     }
 }
 
 /* Import button */
-.folderify-import-btn {
+.mediamatic-import-btn {
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -1517,7 +1517,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* "Done" status badge */
-.folderify-import-status-done {
+.mediamatic-import-status-done {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -1527,17 +1527,17 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Spinner inside button */
-.folderify-import-spinner {
+.mediamatic-import-spinner {
     width: 13px;
     height: 13px;
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-top-color: #fff;
     border-radius: 50%;
-    animation: folderify_spin 0.7s linear infinite;
+    animation: mediamatic_spin 0.7s linear infinite;
 }
 
 /* Error text */
-.folderify-import-error {
+.mediamatic-import-error {
     font-size: 12px;
     color: #d63638;
     margin: 4px 0 0;
@@ -1545,7 +1545,7 @@ body.folderify-folder-dragging .uploader-window {
 }
 
 /* Footer */
-.folderify-import-modal-footer {
+.mediamatic-import-modal-footer {
     padding: 16px 24px 24px;
     border-top: 1px solid #f0f0f1;
     display: flex;
@@ -1553,7 +1553,7 @@ body.folderify-folder-dragging .uploader-window {
     align-items: center;
     gap: 10px;
 
-    .folderify-import-close-btn {
+    .mediamatic-import-close-btn {
         background: none;
         border: 1px solid #c3c4c7;
         border-radius: 4px;
@@ -1572,7 +1572,7 @@ body.folderify-folder-dragging .uploader-window {
         }
     }
 
-    .folderify-import-footer-hint {
+    .mediamatic-import-footer-hint {
         margin: 0;
         font-size: 11.5px;
         color: #8c8f94;

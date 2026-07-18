@@ -4,7 +4,7 @@
  * Plugin Name: Mediamatic - Media Library Folders
  * Plugin URI:  https://wordpress.org/plugins/mediamatic
  * Description: Organize your WordPress media library with unlimited folders.
- * Version:     3.0
+ * Version:     3.1
  * Author:      plugincraft
  * Author URI:  https://profiles.wordpress.org/plugincraft/
  * Text Domain: mediamatic
@@ -25,7 +25,7 @@ if (!defined('WPINC')) {
 register_uninstall_hook(__FILE__, [__NAMESPACE__ . '\\Database', 'uninstall_cleanup']);
 
 // Define plugin constants.
-define('MEDIAMATIC_VERSION', '3.0');
+define('MEDIAMATIC_VERSION', '3.1');
 define('MEDIAMATIC_FILE', __FILE__);
 define('MEDIAMATIC_DIR', plugin_dir_path(__FILE__));
 define('MEDIAMATIC_URL', plugin_dir_url(__FILE__));

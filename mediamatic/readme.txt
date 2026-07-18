@@ -7,7 +7,7 @@ Tags: media organizer, file manager, media library folders, media library folder
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 3.0
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,7 @@ Organize your WordPress media library with unlimited folders, drag & drop, and e
 
 **Mediamatic** is a high-performance, React-based WordPress plugin that helps you keep your media library organized — no matter how many thousands of images, videos, audio files, or documents you have.
 
+**[Live Demo](https://mo.oppoyo.com/demo/wp-admin/upload.php)** — Try it for yourself!
 
 ### 🗂️ Core Features (Free)
 
@@ -68,6 +69,9 @@ Your media files are untouched. Folder assignments are stored separately and can
 
 == Changelog ==
 
-= 3.0 - July 2026 =
+= 3.1 - 18 July 2026 =
+* Fixed: Small issues.
+
+= 3.0 - 13 July 2026 =
 * Updated: The new version has been released.
 
